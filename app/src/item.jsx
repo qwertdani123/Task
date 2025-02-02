@@ -23,7 +23,7 @@ export default function Item(props) {
         <div>{
         <button 
           className="product-card__button" 
-          onClick={() => agregarAlCarrito({id,image})}> Agregar al carrito
+          onClick={() => agregarAlCarrito({id,image})}> Add to cart
         </button> }
       
     

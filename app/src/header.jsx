@@ -18,12 +18,13 @@ export default function Header() {
 return (
     <header>
         <div className="container">
-            <h1>Tienda de Ropa</h1>
+            <h1>Clothing Store
+            </h1>
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
             
@@ -32,14 +33,14 @@ return (
                     <img src={changos} alt="Carrito de compras" className="cart-icon" />
                     <span className="product-count">{carrito.length}</span>
                     <div className="cart-dropdown-content">
-                        <h2 className="cart-title">Productos</h2>
+                        <h2 className="cart-title">Products</h2>
                         {carrito.length === 0 ? (
-                            <p className="empty-cart-message">El carrito está vacío</p>
+                            <p className="empty-cart-message">The cart is empty</p>
                         ) : (//aca se muestra el carrito 
                             carrito.map((item) => (
                                 <div className="cart-item" key={item.id}>
                                     <Item {...item} />
-                                    <span className="item-quantity">Cantidad: {item.cantidad}</span>
+                                    <span className="item-quantity">Total: {item.cantidad}</span>
                                     <img
                                         src={deleteImage}
                                         alt="Eliminar"
